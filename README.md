@@ -1,12 +1,17 @@
-# airflow101
+## airflow101
 curl -sSL install.astronomer.io | sudo bash -s
-astro version
-mkdir airflow101
-cd airflow101
--------------generate a new Airflow project-------------
-astro dev init
-code .
 
+astro version
+
+mkdir airflow101
+
+cd airflow101
+
+-------------generate a new Airflow project-------------
+
+astro dev init
+
+code .
 
 -------------------------------
 docker up
@@ -18,7 +23,7 @@ astro dev start
 if we face with port error like this: 
 Error: error building, (re)creating or starting project containers: Error response from daemon: Ports are not available: exposing port TCP 127.0.0.1:5432 -> 0.0.0.0:0: listen tcp 127.0.0.1:5432: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
 we can chenge this file like this: 
-/mnt/c/PERSONAL_DIR/airflow101/.astro/config.yaml
+airflow101/.astro/config.yaml
 
 project:
     name: airflow-101
@@ -33,7 +38,7 @@ astro dev restart
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-#astro dev run info
+> astro dev run info
 
 Apache Airflow
 version                | 2.9.2+astro.2
