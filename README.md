@@ -1,23 +1,23 @@
 ## airflow101
-curl -sSL install.astronomer.io | sudo bash -s
+> curl -sSL install.astronomer.io | sudo bash -s
 
-astro version
+> astro version
 
-mkdir airflow101
+> mkdir airflow101
 
-cd airflow101
+> cd airflow101
 
 -------------generate a new Airflow project-------------
-astro dev init
+> astro dev init
 
-code .
+> code .
 
 
 ----------image list-----------
-astro dev ps
+> astro dev ps
 
 ------------start--------------------
-astro dev start
+> astro dev start
 
 ----------------------------------
 if we face with port error like this: 
@@ -33,8 +33,8 @@ postgres:
     port: 5435
 
 ------------------------------------
-astro dev stop
-astro dev restart
+> astro dev stop
+> astro dev restart
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > astro dev run info
