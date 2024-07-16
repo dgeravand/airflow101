@@ -8,17 +8,17 @@ mkdir airflow101
 cd airflow101
 
 -------------generate a new Airflow project-------------
-
 astro dev init
 
 code .
 
--------------------------------
-docker up
+
 ----------image list-----------
 astro dev ps
+
 ------------start--------------------
 astro dev start
+
 ----------------------------------
 if we face with port error like this: 
 Error: error building, (re)creating or starting project containers: Error response from daemon: Ports are not available: exposing port TCP 127.0.0.1:5432 -> 0.0.0.0:0: listen tcp 127.0.0.1:5432: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
@@ -35,9 +35,8 @@ postgres:
 ------------------------------------
 astro dev stop
 astro dev restart
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 > astro dev run info
 
 Apache Airflow
