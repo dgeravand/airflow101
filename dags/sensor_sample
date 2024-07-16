@@ -1,0 +1,23 @@
+from airflow.decorators import dag, task
+from airflow.sensors.python import PythonSensor
+from datetime import datetime
+
+def _condition():
+    return False
+
+@dag(start_date=datetime(2021, 1, 1), schedule="@daily",  catchup=False,)
+def sensor_sample():
+     waiting_for_condition = PythonSensor(
+        task_id="waiting_for_condition",
+        python_callable=_condition,
+        poke_interval=60,
+        timeout=7 * 24 * 60 * 60
+    )
+
+     @task
+     def process_file():
+        print("I processed the file!")
+
+     waiting_for_condition >> process_file()
+
+sensor_sample()
